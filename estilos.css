@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.5
+}
+
+img{
+    width: 1000px;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#btn{
+    background-color:#4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+#btn:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.cabecalho{
+ background: #fff;
+ box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+ position: fixed;
+ top: 0;
+ z-index: 2;
+ padding: 15px 0;
+ width: 100%;
+}
+
+.navegacao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.menu {
+    display:flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu a {
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-items{
+    display: block;
+}
+
+.menu .nav-items:hover{
+    transform: scale(1.07);
+    transition: 0.4s;
+    color: #4caf50;
+}
+
+section{
+    padding: 40px 0;
+}
+
+.destaque{
+    padding: 100px;
+    background-color: #e9f7ef;
+}
+
+.destaque .container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.texto h1{
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color:#333;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.recursos .container{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+}
+
+.card{
+    padding: 20px;
+    text-align: center;
+}
+
+.icone{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta{
+    background-color: #4caf50;
+    color: #fff;
+    text-align: center;
+}
+
+.cta #btn{
+    background-color: #fff;
+    color: #4caf50;
+    border: none;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+}
+
+.btn-menu{
+    border: none;
+    background: none;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .destaque .container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .recursos .container{
+        grid-template-columns: 1fr;
+    }
+    .cta{
+        padding:30px;
+    }
+    .btn-menu{
+        display: block;
+    }
+    .menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        overflow: hidden;
+        transition: 0.3s ease-in-out;
+        max-height: 0;
+        text-align: center;
+    }
+    .menu.ativo{
+        max-height: 220px;
+        margin-bottom: 20px;
+    }
+}
